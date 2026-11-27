@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import swimmer_list
+from core.views import swimmer_list, swimmer_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('swimmer_list/', swimmer_list),
+    path('swimmers', swimmer_list, name='swimmer-list'),
+    path('swimmer/<swimmer_id>/', swimmer_details, name='swimmer-details'),
 ]

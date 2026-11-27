@@ -3,5 +3,9 @@
 {% block title %}Пловцы{% endblock %}
 
 {% block content %}
-Hello
+{% for swimmer in swimmer_list %}
+<ul>
+    <li><a href="{% url 'swimmer-details' swimmer.id %}">{{ swimmer.last_name }} {{ swimmer.first_name }}</a></li>
+</ul>
+{% endfor %}
 {% endblock %}
