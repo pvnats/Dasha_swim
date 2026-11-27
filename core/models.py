@@ -26,6 +26,6 @@ class Training(models.Model):
     courses = models.ManyToManyField(Course)
 
     def __str__(self):
-        return f'{self.date_time}'
+        return f'{self.date_time} {len(self.students.values())}'
 
 

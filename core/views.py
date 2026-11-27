@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from core.models import Swimmer
+from core.models import Swimmer, Training
 
 
 def home(request):
@@ -15,3 +15,7 @@ def swimmer_list(request):
 def swimmer_details(request, swimmer_id):
     swimmer = Swimmer.objects.get(id=swimmer_id)
     return render(request, template_name='core/swimmer_details.html', context={'swimmer': swimmer})
+
+def training_list(request):
+    training_list = Training.objects.all()
+    return render(request, template_name='core/training_list.html', context={'object_list': training_list})

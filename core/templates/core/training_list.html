@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block title %}Тренировки{% endblock %}
+
+{% block content %}
+{% for object in object_list %}
+<ul>
+    <li><a href="#">{{ object.date_time }} {{ object.students.values.0.first_name }}</a></li>
+</ul>
+{% endfor %}
+{% endblock %}
