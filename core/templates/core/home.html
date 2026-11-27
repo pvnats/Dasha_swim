@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}Домашняя страница тренировок{% endblock %}
+
+{% block content %}
+<ul>
+    <li><a href="{% url 'swimmer-list' %}">Пловцы</a></li>
+    <li><a href="#">Тренировки</a></li>
+</ul>
+
+{% endblock %}
+
